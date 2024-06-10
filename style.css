@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Varta:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    background-color: aquamarine;
+
+}
+
+h1 {
+    font-family: Rowdies, sans-serif;
+    text-align: center;
+}
+
+h3, h2, p {
+    font-family: Varta, sans-serif;  
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    pointer-events: none;
+  }
+
+  .cards {
+    /* visibility: hidden; */
+    background-color: #fbea54af;
+    box-shadow: 0 0 5px 2px #fbea54b4;
+    border-radius: 20px;
+    margin: 10px;
+    text-align: center;
+    pointer-events: all;
+  }
+
+  img {
+    opacity: 0;
+    width: 75%;
+  }
+
+  .congrats {
+    color: deeppink;
+
+  }
+
+  #reset {
+    
+  }
