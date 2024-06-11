@@ -9,23 +9,26 @@
 	<link href="./style.css" rel="stylesheet">
 </head>
 <body>
-	<h1>Memory Game!</h1>
-	<h3>Instructions</h3>
-	<p>Select any two cards, one at a time. If the both the cards match (showing you the same image), you get to keep the cards. If they do not match they will turn back over for you to try again with different cards. Good luck, you've got this!</p>
+	<button class="restart-btn" id="restart">Restart</button>
 	<div class="conatiner">
-		<button class="cards" data-name="cake"><img alt="slice of cake" src="M.G.%20assets/cake.png"></button>
-		<button class="cards" data-name="oysters"><img alt="two shucked oysters" src="M.G.%20assets/oysters.png"></button>
-		<button class="cards" data-name="curry"><img alt="a plate of Japanese curry" src="M.G.%20assets/curry.png"></button>
-		<button class="cards" data-name="parfait"><img alt="a glass of chia seed parfait" src="M.G.%20assets/parfait.png"></button>
-		<button class="cards" data-name="ramen"><img alt="a bowl of ramen with chopsticks pulling up noodles" src="M.G.%20assets/ramen.png"></button>
-		<button class="cards" data-name="cake"><img alt="slice of cake" src="M.G.%20assets/cake.png"></button>
-		<button class="cards" data-name="oysters"><img alt="two shucked oysters" src="M.G.%20assets/oysters.png"></button>
-		<button class="cards" data-name="curry"><img alt="a plate of Japanese curry" src="M.G.%20assets/curry.png"></button>
-		<button class="cards" data-name="parfait"><img alt="a glass of chia seed parfait" src="M.G.%20assets/parfait.png"></button>
-		<button class="cards" data-name="ramen"><img alt="a bowl of ramen with chopsticks pulling up noodles" src="M.G.%20assets/ramen.png"></button>
-		<button class="congrats">
-			<h2>Congratulations you win!</h2><button id="reset" type="button">Reset</button>
+		<div class="top-game-container" id="go-cards">
+			<div class="headings-cont"></div>
+			<h1 class="mg-heading">Memory Game!</h1>
+			<h3 class="label-in">Instructions:</h3>
+			<p class="game-instructions">Select any two cards, one at a time. If the both the cards match (showing you the same image), you get to keep the cards. If they do not match they will turn back over for you to try again with different cards. Good luck, you've got this!</p>
 		</div>
+		<div class="cards-container">
+			<div class="cards"><img class="card-back" src="assets/card%20back%20purple.png"><img alt="a sliced in half avocado" class="card-face" src="assets/avocado.png"></div>
+			<div class="cards"><img class="card-back" src="assets/card%20back%20purple.png"><img alt="kiwi cut in half" src="assets/kiwi.png"></div>
+			<div class="cards"><img class="card-back" src="assets/card%20back%20purple.png"><img alt="an orange" src="assets/orange.png"></div>
+			<div class="cards"><img class="card-back" src="assets/card%20back%20purple.png"><img alt="a papaya cut in half" src="assets/papaya.png"></div>
+			<div class="cards"><img class="card-back" src="assets/card%20back%20purple.png"><img alt="a strawberry" src="assets/strawberry.png"></div>
+			<div class="cards"><img class="card-back" src="assets/card%20back%20purple.png"><img alt="a sliced in half avocado" src="assets/avocado.png"></div>
+			<div class="cards"><img class="card-back" src="assets/card%20back%20purple.png"><img alt="kiwi cut in half" src="assets/kiwi.png"></div>
+			<div class="cards"><img class="card-back" src="assets/card%20back%20purple.png"><img alt="an orange" src="assets/orange.png"></div>
+			<div class="cards"><img class="card-back" src="assets/card%20back%20purple.png"><img alt="a papaya cut in half" src="assets/papaya.png"></div>
+			<div class="cards"><img class="card-back" src="assets/card%20back%20purple.png"><img alt="a strawberry" src="assets/strawberry.png"></div>
+		</div> 
 	</div>
 </body>
 </html>

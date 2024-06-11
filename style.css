@@ -9,44 +9,75 @@ body {
 
 }
 
-h1 {
-    font-family: Rowdies, sans-serif;
-    text-align: center;
-}
-
-h3, h2, p {
-    font-family: Varta, sans-serif;  
-}
-
 .container {
+    margin: auto;
     width: 100%;
+    height: 100vh;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    position: relative;
-    pointer-events: none;
-  }
+    align-items: center;
+}
 
-  .cards {
-    /* visibility: hidden; */
-    background-color: #fbea54af;
-    box-shadow: 0 0 5px 2px #fbea54b4;
-    border-radius: 20px;
-    margin: 10px;
-    text-align: center;
-    pointer-events: all;
-  }
+.top-game-container {
+  width: auto;
+  padding: 15px;
+  border-radius: 15px;  
 
-  img {
-    opacity: 0;
-    width: 75%;
-  }
+}
 
-  .congrats {
-    color: deeppink;
+.cards-container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 20px 5px;
+  cursor: pointer;
+  place-items: center;
+}
 
-  }
+.mg-heading {
+  font-family: Rowdies, Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  color: rgb(40, 28, 113);
+  font-size: 50px;
+}
 
-  #reset {
-    
-  }
+.label-in, .game-instructions {
+  font-family: Varta, Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.card-back{
+  border-radius: 12px;
+  position: absolute; 
+  width: 200px;
+  height: 285px; 
+}
+
+.card-face {
+  width: 200px;
+  height: 285px;
+  transform: rotateY('90deg');
+}
+
+.restart-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: rgb(179, 131, 190);
+  border: 3px solid black;
+  cursor: pointer;
+
+}

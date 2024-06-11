@@ -6,16 +6,16 @@ const resetButton = document.querySelector("#reset")
 
 /*-------------------------------- Variables --------------------------------*/
 
-let cardChoices = [];
-let matchCounter = 0;
-let cardArr = Array.from(cards);
+let flippedCards = [];
+let locked = false;
 
 /*------------------------ Cached Element References ------------------------*/
 
 
 
 /*----------------------------- Event Listeners -----------------------------*/
-
+// cards.forEach(card => { card.addEventListener('click', flipCard); });
 
 
 /*-------------------------------- Functions --------------------------------*/
+//function for flipping cards
