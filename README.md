@@ -16,7 +16,9 @@ To play this memory game on your device simply follow these easy steps:
 
 ## Technologies
 HTML
+
 CSS
+
 Javascript
 
 ## Next Steps
