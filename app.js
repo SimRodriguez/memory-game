@@ -4,33 +4,43 @@ const reset = document.getElementById('reset');
 const imgsLinksArray = [{
 	id: 'card1',
 	img: 'assets/avocado.png'
+    altName: 'Avocado Img'
 }, {
 	id: 'card2',
 	img: 'assets/kiwi.png'
+    altName: 'Kiwi Img'
 }, {
 	id: 'card3',
 	img: 'assets/orange.png'
+    altName: 'Orange Img'
 }, {
 	id: 'card4',
 	img: 'assets/papaya.png'
+    altName: 'Papaya Img'
 }, {
 	id: 'card5',
 	img: 'assets/strawberry.png'
+    altName: 'Strawberry Img'
 }, {
 	id: 'card6',
 	img: 'assets/avocado.png'
+    altName: 'Avocado Img'
 }, {
 	id: 'card7',
 	img: 'assets/kiwi.png'
+    altName: 'Kiwi Img'
 }, {
 	id: 'card8',
 	img: 'assets/orange.png'
+    altName: 'Orange Img'
 }, {
 	id: 'card9',
 	img: 'assets/papaya.png'
+    altName: 'Papaya Img'
 }, {
 	id: 'card10',
 	img: 'assets/strawberry.png'
+    altName: 'Strawberry Img'
 }]
 /*-------------------------------- Variables --------------------------------*/
 let allCardFaces = document.getElementsByClassName('card-face')
@@ -41,9 +51,10 @@ let message = document.getElementById('message')
 /*----------------------------- Event Listeners -----------------------------*/
 reset.addEventListener('click', init);
 
-for (let i = 0; i < cards.length; i++) {
-	cards[i].addEventListener('click', handleClick);
-}
+const cardElements = document.querySelectorAll('.cards'); 
+cardElements.forEach(card => { 
+    card.addEventListener('click', handleClick); 
+});
 /*-------------------------------- Functions --------------------------------*/
 function shuffleArray(array) {
     const newArray = array.slice();
@@ -59,7 +70,8 @@ function init() {
 	for (let i = 0; i < cards.length; i++) {
 		const cardFace = cards[i].querySelector('.card-face img');
 		cardFace.src = shuffledArray[i].img;
-		cards[i].setAttribute('data-card-id', shuffleArray[i].id)
+        cardFace.alt = shuffledArray[i].altName
+		cards[i].setAttribute('data-card-id', shuffledArray[i].id)
 	}
 }
 
@@ -75,6 +87,10 @@ function handleClick() {
 				toggledCardsArray = [];
 			}, 1000);
 		} else {
+            toggledCardsArray.forEach (card => {
+                card.removeEventListener('click', handleClick);
+                card.classList.add("matched")
+            });
 			toggledCardsArray = [];
 			matchedCardsCount++;
 			if (matchedCardsCount === cards.length / 2) {
